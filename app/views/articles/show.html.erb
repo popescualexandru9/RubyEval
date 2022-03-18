@@ -1,0 +1,12 @@
+<h1> <%= @article.title %> </h1>
+
+<h3> Author's name : <%= @article.user.name %> </h3>
+<h3> Author's email : <%= @article.user.email %> </h3>
+<div> 
+  <p> Tags </p> 
+  <% @article.tags.each do |tag| %>
+    <pre> <%= tag.name %></pre>
+  <%end%>
+</div>
+
+<p> <%= @article.body %> </p>
